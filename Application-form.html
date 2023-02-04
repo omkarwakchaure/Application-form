@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+        font-family: 'Anahein';
+        font-size: 1.2em;
+    }
+
+    #outside{
+        background-color: lightgoldenrodyellow;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    h1{
+        font-size: 1.5em;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    form{
+        margin: 0 auto;
+        width: 70%;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+    }
+    #survey-form{
+        background-color: white;
+    }
+    fieldset{
+        border: 1px solid lightgray;
+        margin: 10px;
+    }
+    legend{
+        font-weight: 700;
+    }
+    #number{
+        width: 150px;
+    }
+    div+div{
+        margin-top: 1em;
+    }
+    input,textarea{
+        width: 200px;
+        border: 1px solid #999;
+    }
+    input:focus,textarea:focus{
+        border-color: orangered;
+    }
+    textarea{
+        vertical-align: top;
+        height: 5em;
+        resize: vertical;
+    }
+    .button{
+        padding-left: 90px;
+    }
+    button{
+        margin: .5em;
+        font-size: 1em;
+        text-transform: capitalize;
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 2px;
+    }
+    #submitbutton{
+        display: flex;
+        justify-content: center;
+    }
+
+    
+  </style>
+</head>
+<body>
+    <div id="outside">
+     <form id ="survey form" action="applicationform.html" method="post">
+        <h1 id="tittle">Application for permission to date my daughter</h1>
+        <p id="description"><b>Note:</b>form is to be completed at least 21 days prior to date</p>
+
+        <fieldset>
+            <legend>Personal details</legend>
+                 <div>
+                    <label id="name-label" for="name">Name :</label><br>               
+                    <input type="text"  id="name" name="user_name" placeholder="Enter your name">
+                 </div>
+                <div><br>
+                    <label id="address-label" for="address">Address :</label><br>
+                    <input type="address" id="address"name ="user_Address" placeholder="Enter address here">
+                </div><br>
+
+                <div>
+                    <label id="email-label" for="email">Email:</label><br>
+                    <input type="email" id="email" name ="user_Email" placeholder="Enter Email here">
+                </div><br>
+                <div>
+                    <label id="number-label" for="phone">Phone Number :</label><br>
+                    <input type="tel" id="number" name ="user_name" placeholder="Enter number here"  maxlength="10">
+                </div><br>
+                <div>
+                    <label id="IQ-label" for="iq">IQ :</label><br>
+                    <input type="number" id="iq" name ="user_iq" placeholder="Enter IQ here"  maxlength="10">
+                </div><br>
+
+                <!---------Radio button-------------------->
+
+                <div>
+                    <label for="Gender">Gender</label>
+                    <p>
+                        <input type="radio" name="gender" value="male" > Male <br>
+                        <input type="radio" name="gender" value="female" > Female <br>
+                        <input type="radio" name="gender" value="other" > Other <br>  
+                    </p>
+                </div>
+
+                <label for="date-label">Date of Proposed Outing :</label>
+                <input type="date" name="bday">
+
+        </fieldset>
+
+        <!---------------check boxes------------>
+        <fieldset>
+            <label for="gender">Check All That Apply</label>
+            <p>
+                <input type="checkbox" name="tattoo" value="tattoo"> I have tattoos and piercings<br>
+                <input type="checkbox" name="age" value="car"> I am more than 2 years older than my daughter<br>
+                <input type="checkbox" name="car" value="car"> I own a panel van or v8 ute<br>
+                <input type="checkbox" name="work" value="work"> I work full-time<br>
+                <input type="checkbox" name="rich" value="rich"> My parents are rich<br>
+                 
+            </p>
+        </fieldset>
+
+        <!-----------------Drop down menus------------------>
+
+        <fieldset>
+            <div>
+            <P>
+                <label for="politics">Political Persuasion :</label>
+                <select id="dropdown">
+                    <option value="left">Left Wing</option>
+                    <option value="Right">Right Wing</option>
+                </select><br>
+            </P>
+                <label for="politics">Education Level Completed :</label>
+                <select id="dropdown">
+                    <option value="university">University</option>
+                    <option value="college">College</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!----------------Text Areas------------>
+        <fieldset>
+            <legend>Essay Section</legend>
+            <div>
+                <label for="msg" ></label>
+                <p>In 50 words or more explain why you want to date my daughter </p>
+                <textarea id="msg" name="user_msg" rows="4" cols="50" placeholder="Enter text here"></textarea>
+            </div>
+            <div>
+                <label for="msg" ></label>
+                <p>Upload contact details here for 2 references </p>
+                <textarea id="msg" name="user_msg" rows="4" cols="50" placeholder="Enter text here"></textarea>
+            </div>
+            <p>Upload Police Clearance Certificate,Bank Statement and Medical Certificates here :<br><br><button>Attach Files</button></p>
+        </fieldset><br>
+        <div id="submitbutton"><button type="submit" id="submit"> Send Your Application</button></div>
+    </form>
+    </div>
+</body>
+</html>
